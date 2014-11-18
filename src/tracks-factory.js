@@ -39,8 +39,8 @@
             if(typeof capacity === 'integer' && capacity > (-1)){
                 for(var i = 0; i < capacity; i++){
                     var track = create_default_track(this._defaultImage);
-                    this._markers.add(track.marker);
-                    this._labels.add(track.label);
+                    track.marker = this._markers.add(track.marker);
+                    track.label = this._labels.add(track.label);
                     this._tracks.push(track);
                 }
             }
@@ -62,8 +62,8 @@
                 track = this._tracks.pop();
             }else{
                 track = create_default_track(this._defaultImage);
-                this._markers.add(track.marker);
-                this._labels.add(track.label);
+                track.marker = this._markers.add(track.marker);
+                track.label = this._labels.add(track.label);
                 this._capacity++;
             }
 
