@@ -109,7 +109,6 @@
 
         TracksFactory.prototype.remove = function(id){
             if(typeof this._tracksMap[id] === 'undefined'){
-                console.log("Track id: " + id + "doesn't exist!");
                 return false;
             }
 
@@ -124,7 +123,6 @@
 
         TracksFactory.prototype.update = function(id, status, location, width, height, image){
             if(typeof this._tracksMap[id] === 'undefined'){
-                console.log("Track id: " + id + "doesn't exist!");
                 return false;
             }
 
